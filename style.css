@@ -1,0 +1,85 @@
+body {
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-fluid {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.row.h-100 {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.column-left,
+.column-right {
+    height: calc(100vh - 150px);
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Custom scrollbar for better appearance */
+.column-left::-webkit-scrollbar,
+.column-right::-webkit-scrollbar {
+    width: 8px;
+}
+
+.column-left::-webkit-scrollbar-track,
+.column-right::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.column-left::-webkit-scrollbar-thumb,
+.column-right::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+.column-left::-webkit-scrollbar-thumb:hover,
+.column-right::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+}
+
+.card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 15px;
+}
+
+.card-header {
+    background-color: #fff;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.generate-cv {
+    position: sticky;
+    bottom: 0;
+    background-color: #f4f4f4;
+    padding: 15px 0;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        overflow-y: auto;
+    }
+    
+    .column-left,
+    .column-right {
+        height: auto;
+        overflow: visible;
+        padding-right: 0;
+    }
+
+    .generate-cv {
+        position: static;
+        margin-top: 20px;
+    }
+}
